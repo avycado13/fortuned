@@ -11,7 +11,11 @@ app.config['BABEL_LANGUAGES'] = ['en', 'fr', 'es']
 
 
 def get_locale():
-    return request.accept_languages.best_match(app.config['BABEL_LANGUAGES'])
+    if request:
+        return request.accept_languages.best_match(app.config['BABEL_LANGUAGES'])
+    else:
+        return app.config['BABEL_DEFAULT_LOCALE']
+
 babel.init_app(app, locale_selector=get_locale())
 
 def get_fortunes(file='fortunes.txt'):
