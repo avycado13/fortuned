@@ -22,7 +22,7 @@ numbers = [random.randint(1, 99) for i in range(0, 5)]
 
 @app.route('/')
 def main():
-    return render_template("index.html", fortune=gettext(random.choice(get_fortunes())), numbers=numbers)
+    return render_template("index.html", fortune=random.choice(get_fortunes()), numbers=numbers)
 
 if __name__ == "__main__":
     app.run(debug=True)
