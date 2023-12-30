@@ -1,22 +1,10 @@
 "Gives you a random fortune"
 import random
 from flask import Flask, render_template, request
-from flask_babel import Babel, gettext
 
 app = Flask(__name__)
-babel = Babel(app)
-
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
-app.config['BABEL_LANGUAGES'] = ['en', 'fr', 'es']
 
 
-def get_locale():
-    if request:
-        return request.accept_languages.best_match(app.config['BABEL_LANGUAGES'])
-    else:
-        return app.config['BABEL_DEFAULT_LOCALE']
-
-babel.init_app(app, locale_selector=get_locale())
 
 def get_fortunes(file='fortunes.txt'):
     "Fortune parser"
