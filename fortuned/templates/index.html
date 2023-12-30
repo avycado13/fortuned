@@ -12,7 +12,11 @@
                     Your Fortune is:          
                 </h1>
                 <p class="subtitle" id="subtitle">
-                    <strong>{{fortune}}</strong>
+                    <strong>{{fortune}}</strong><br>
+                    {% for i in numbers %}
+                      {{ i }}
+                    {% endfor %}
+
                 </p>
                 <button id="share-button">Share this fortune</button>
             </div>
