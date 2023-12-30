@@ -1,6 +1,6 @@
 "Gives you a random fortune"
 import random
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
