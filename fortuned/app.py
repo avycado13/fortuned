@@ -5,7 +5,6 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-
 def get_fortunes(file='fortunes.txt'):
     "Fortune parser"
     # opening the file in read mode
@@ -18,11 +17,14 @@ def get_fortunes(file='fortunes.txt'):
         file.close()
         return fortunes
 
+
 numbers = [random.randint(1, 99) for i in range(0, 5)]
+
 
 @app.route('/')
 def main():
     return render_template("index.html", fortune=random.choice(get_fortunes()), numbers=numbers)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
