@@ -4,6 +4,7 @@ version = "1.0.0"
 description = "A fortune teller that doesn't really tell you your fortune."
 dependencies = [
     "flask",
+    "flask-babel",
 ]
 
 [build-system]
