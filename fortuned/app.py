@@ -8,11 +8,11 @@ babel = Babel(app)
 
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_LANGUAGES'] = ['en', 'fr', 'es']
-babel.init_app(app, locale_selector=get_locale())
 
 
 def get_locale():
     return request.accept_languages.best_match(app.config['BABEL_LANGUAGES'])
+babel.init_app(app, locale_selector=get_locale())
 
 def get_fortunes(file='fortunes.txt'):
     "Fortune parser"
