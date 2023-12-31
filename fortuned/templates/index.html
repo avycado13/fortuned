@@ -77,19 +77,19 @@
                 console.error('Error sharing:', error);
               }
 
-              // Check if the fortune already exists in the history array
-              const fortune = document.getElementById('subtitle').textContent;
-              if (!fortuneHistory.includes(fortune)) {
-                fortuneHistory.push(fortune);
-              }
-
-              // Update the fortune history on the webpage
-              updateFortuneHistory();
-
-              // Update the fortune history in localStorage
-              localStorage.setItem('fortuneHistory', JSON.stringify(fortuneHistory));
             });
+            // Check if the fortune already exists in the history array
+            const fortune = document.getElementById('subtitle').textContent;
+            if (!fortuneHistory.includes(fortune)) {
+              fortuneHistory.push(fortune);
+            }
 
+            // Update the fortune history on the webpage
+            updateFortuneHistory();
+
+            // Update the fortune history in localStorage
+            localStorage.setItem('fortuneHistory', JSON.stringify(fortuneHistory));
+            
             // Get the clear history button element
             const clearHistoryButton = document.getElementById('clear-history-button');
 
