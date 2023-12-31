@@ -18,11 +18,11 @@ def get_fortunes(file='fortunes.txt'):
         return fortunes
 
 
-numbers = [random.randint(1, 99) for i in range(0, 5)]
 
 
 @app.route('/')
 def main():
+    numbers = [random.randint(1, 99) for i in range(0, 5)]
     return render_template("index.html", fortune=random.choice(get_fortunes()), numbers=numbers)
 
 
