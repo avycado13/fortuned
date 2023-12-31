@@ -22,6 +22,7 @@ def get_fortunes(file='fortunes.txt'):
 
 @app.route('/')
 def main():
+    "main"
     numbers = [random.randint(1, 99) for i in range(0, 5)]
     return render_template("index.html", fortune=random.choice(get_fortunes()), numbers=numbers)
 
