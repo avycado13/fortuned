@@ -13,5 +13,5 @@ build-backend = "flit_core.buildapi"
 [tool.flit.module]
 fortuned = "fortuned"
 
-[tool.flit.scripts]
+[project.scripts]
 fortuned = "fortuned.app:main"
