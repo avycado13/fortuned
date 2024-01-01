@@ -1,7 +1,8 @@
-[project]
+[tool.flit.metadata]
 name = "fortuned"
 version = "1.0.2"
 description = "A fortune teller that doesn't really tell you your fortune."
+long_description = "file: README.md"
 dependencies = [
     "flask",
 ]
@@ -15,4 +16,3 @@ fortuned = "fortuned.app"
 
 [project.scripts]
 fortuned = "flask run --app fortuned.app"
-
