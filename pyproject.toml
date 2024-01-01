@@ -9,3 +9,9 @@ dependencies = [
 [build-system]
 requires = ["flit_core<4"]
 build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+fortuned = "fortuned"
+
+[tool.flit.scripts]
+fortuned = "fortuned.app:main"
