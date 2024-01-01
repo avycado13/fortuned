@@ -11,7 +11,8 @@ requires = ["flit_core<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.module]
-fortuned = "fortuned"
+fortuned = "fortuned.app"
 
 [project.scripts]
-fortuned = "fortuned.app:main"
+fortuned = "flask run --app fortuned.app"
+
