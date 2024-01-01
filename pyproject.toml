@@ -1,11 +1,8 @@
-[tool.flit.metadata]
+[project]
 name = "fortuned"
 version = "1.0.2"
 description = "A fortune teller that doesn't really tell you your fortune."
-long_description = "file: README.md"
-dependencies = [
-    "flask",
-]
+readme = "README.md"
 
 [build-system]
 requires = ["flit_core<4"]
