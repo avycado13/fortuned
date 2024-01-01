@@ -36,5 +36,4 @@ The application is structured as follows:
 
 You can customize the application by modifying the fortunes text file. Each line in the file represents a single fortune. The application will read the file and serve a random line as a fortune.
 
-
 [def]: https://badge.fury.io/py/fortuned.svg
