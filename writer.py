@@ -1,5 +1,4 @@
 import random
-import sys
 
 # Define lists of phrases that can be combined to create fortunes
 subjects = ["You", "A close friend", "A stranger", "Your loved one", "Your pet"]
